@@ -1,5 +1,5 @@
 const FootNote = () => (
-  <div className="mt-5 sm:mt-10 flex flex-col gap-3 items-center sm:items-start text-center sm:text-left  font-medium text-[#ABABAB]">
+  <div className="flex flex-col mt-5 sm:mt-10 gap-3 items-center sm:items-start text-center sm:text-left font-medium text-accentgray">
     <h2 className="text-xs">
       By clicking &quot;Get Started&quot;, you agree with Terms and Conditions,
       Privacy Policy, Subscription Terms
