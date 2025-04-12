@@ -27,7 +27,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden sm:flex gap-10 text-lg font-semibold text-[#ABABAB]">
+        <nav className="hidden sm:flex gap-10 text-lg font-semibold text-accentgray">
           {navigationLinks.map((link) => (
             <Link
               key={link.name}
@@ -45,7 +45,12 @@ const Header = () => {
           onClick={() => setIsMenuVisible(!isMenuVisible)}
           aria-label="Toggle menu"
         >
-          <Image src="/hamburger-icon.png" alt="Menu" width={24} height={24} />
+          <Image
+            src="/hamburger-menu-icon.png"
+            alt="Menu"
+            width={24}
+            height={24}
+          />
         </button>
       </header>
 

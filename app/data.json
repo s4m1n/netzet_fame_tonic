@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "icon": "/star.png",
+    "alt": "Check icon",
+    "description": "Start growing your influence right away—no waiting required!"
+  },
+  {
+    "id": 2,
+    "icon": "/star.png",
+    "alt": "Check icon",
+    "description": "Create viral TikToks and Reels step by step with easy-to-follow lessons"
+  },
+  {
+    "id": 3,
+    "icon": "/star.png",
+    "alt": "Check icon",
+    "description": "Use a Personal AI Worker to boost your content"
+  },
+  {
+    "id": 4,
+    "icon": "/star.png",
+    "alt": "Check icon",
+    "description": "Learn from expert-led courses designed for aspiring influencers"
+  }
+]
