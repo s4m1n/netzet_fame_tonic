@@ -10,7 +10,7 @@ type Feature = {
 const FeatureList = ({ features }: { features: Feature[] }) => (
   <ul className="text-[16px] text-left gap-2 mt-4">
     {features.map((feature) => (
-      <li key={feature?.id} className="flex items-center gap-2 py-1.5">
+      <li key={feature.id} className="flex items-center gap-2 py-1.5">
         <Image
           aria-hidden
           src={feature.icon}

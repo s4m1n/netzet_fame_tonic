@@ -14,32 +14,27 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex justify-between items-center py-4">
-        {/* Logo */}
-        <Link href="/" aria-label="Fame Tonic Home">
-          <Image
-            src="/website-logo.png"
-            alt="Fame Tonic Logo"
-            width={174}
-            height={174}
-            className="w-[108px] sm:w-[174px] object-contain"
-          />
-        </Link>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden sm:flex gap-10 text-lg font-semibold text-accentgray">
+      <div className="flex justify-between items-start">
+        <Image
+          aria-hidden
+          src="/website-logo.png"
+          alt="Fame Tonic Logo"
+          width={174}
+          height={174}
+          className="h-auto w-[108px] sm:w-[174px] object-contain transform translate-x-full sm:transform-none sm:translate-x-0 sm:ml-5"
+        />
+        <div className="hidden sm:flex gap-10 text-lg font-semibold text-accentgray sm:pr-12">
           {navigationLinks.map((link) => (
             <Link
-              key={link.name}
               href={link.href}
-              data-testid={`desktop-${link.testId}`}
+              key={link.name}
+              passHref
+              data-testid="desktop-about"
             >
               {link.name}
             </Link>
           ))}
-        </nav>
-
-        {/* Mobile Menu Button */}
+        </div>
         <button
           className="sm:hidden flex items-center"
           onClick={() => setIsMenuVisible(!isMenuVisible)}
@@ -52,9 +47,7 @@ const Header = () => {
             height={24}
           />
         </button>
-      </header>
-
-      {/* Mobile Navigation Menu */}
+      </div>
       {isMenuVisible && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex flex-col items-center justify-center z-50">
           <button
@@ -66,11 +59,12 @@ const Header = () => {
           </button>
           {navigationLinks.map((link) => (
             <Link
-              key={link.name}
               href={link.href}
+              key={link.name}
+              passHref
               className="text-white text-xl font-semibold mb-4"
               onClick={() => setIsMenuVisible(false)}
-              data-testid={`mobile-${link.testId}`}
+              data-testid="mobile-about"
             >
               {link.name}
             </Link>
